@@ -53,7 +53,7 @@ public class Main{
                                 break;
 
                             case 2:
-                                //listarEstudiantes();
+                                listarEstudiantes();
                                 break;
 
                             case 3:
@@ -163,6 +163,7 @@ public class Main{
         } while (opcion1 != 0);
     }
 
+//-----------------------------------------------------------------------------------------------------------
     public void registrarEstudiante()
     {
         System.out.println("\n---AGREGAR ESTUDIANTES---");
@@ -181,9 +182,34 @@ public class Main{
         estudiantes.add(estudiante);
         System.out.println("Registro Exitoso\n");
     }
+//-----------------------------------------------------------------------------------------------------------
 
-//    public void listarEstudiantes() {}
-//    public void buscarEstudiante()
+    public void listarEstudiantes() {
+        System.out.println("\n---MOSTRAR ESTUDIANTES---");
+
+        if (estudiantes.isEmpty()){
+            System.out.println("No hay Datos\n");
+        }else
+        {
+            for (Estudiante estudiante : estudiantes)
+            {
+                System.out.println(estudiante);
+            }
+        }
+    }
+//-----------------------------------------------------------------------------------------------------------
+
+    public void buscarEstudiante()
+    {
+        for (Estudiante estudiante : estudiantes) {
+            if (estudiante.getcodigo().equals(codigo)) {
+                return estudiante;
+            }
+        }
+        return null;
+    }
+//-----------------------------------------------------------------------------------------------------------
+
 //    public void actualizarEstudiante()
 //    public void eliminarEstudiante()
 //
