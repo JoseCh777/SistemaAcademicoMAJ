@@ -1,5 +1,6 @@
 package org.example;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.*;
 
@@ -57,11 +58,11 @@ public class Main{
                                 break;
 
                             case 3:
-                                //buscarEstudiante();
+                                buscarEstudiante();
                                 break;
 
                             case 4:
-                                //actualizarEstudiante();
+                                actualizarEstudiante();
                                 break;
 
                             case 5:
@@ -199,18 +200,54 @@ public class Main{
     }
 //-----------------------------------------------------------------------------------------------------------
 
-    public void buscarEstudiante()
-    {
+    public void buscarEstudiante() {
+        System.out.println("\n---BUSCAR ESTUDIANTE POR CODIGO---");
+        System.out.print("Ingrese el codigo: ");
+        scan.nextLine();
+        String codigo = scan.nextLine();
+
+        boolean encontrado = false;
         for (Estudiante estudiante : estudiantes) {
             if (estudiante.getcodigo().equals(codigo)) {
-                return estudiante;
+                System.out.println(estudiante);
+                encontrado = true;
+                break;
             }
         }
-        return null;
+        if (!encontrado) {
+            System.out.println("Estudiante no encontrado.");
+        }
     }
 //-----------------------------------------------------------------------------------------------------------
 
-//    public void actualizarEstudiante()
+    public void actualizarEstudiante()
+    {
+        System.out.println("\n---MODIFICAR ESTUDIANTE---");
+        System.out.println("Ingrese el codigo del Estudiante");
+        scan.nextLine();
+        String codigo = scan.nextLine();
+
+
+        for (Estudiante estudiante : estudiantes)
+        {
+            if (estudiante.getcodigo().equals(codigo))
+            {
+                System.out.println("Ingrese Nueva Nombre   :");
+                estudiante.setnombre(scan.nextLine());
+                System.out.println("Ingrese Nuevo Apellido :");
+                estudiante.setapellido(scan.nextLine());
+                System.out.println("Ingrese Nuevo Edad : ");
+                estudiante.setedad(scan.nextLine());
+                System.out.println("Ingrese Nuevo semestre : ");
+                estudiante.setsemestre(scan.nextLine());
+                System.out.println("Modificacion Exitosa");
+                return;
+            }
+        }
+        System.out.println("Estudiante no Encontrado\n");
+    }
+//-----------------------------------------------------------------------------------------------------------
+
 //    public void eliminarEstudiante()
 //
 //    public void registrarAsignatura()
