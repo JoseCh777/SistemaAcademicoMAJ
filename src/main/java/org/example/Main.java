@@ -1,3 +1,5 @@
+package org.example;
+
 import java.util.ArrayList;
 import java.util.*;
 
@@ -7,9 +9,9 @@ public class Main{
 
     Scanner scan = new Scanner(System.in);
 
-    ArrayList<String> estudiantes = new ArrayList<>();
-    ArrayList<String> asignaturas = new ArrayList<>();
-    ArrayList<Double> notas = new ArrayList<>();
+    ArrayList<Estudiante> estudiantes = new ArrayList<>();
+    ArrayList<Asignatura> asignaturas = new ArrayList<>();
+    ArrayList<Nota> notas = new ArrayList<>();
 
     public static void main(String[] args) {
         Main sistema = new Main();   // crear objeto
@@ -47,7 +49,7 @@ public class Main{
 
                         switch (opcion) {    //sub Swtich 1
                             case 1:
-                                //registrarEstudiante();
+                                registrarEstudiante();
                                 break;
 
                             case 2:
@@ -90,17 +92,19 @@ public class Main{
                         opcion = scan.nextInt();
 
                         switch (opcion) {       //Sub switch 2
-                            case 1:
+                            case 1: //registrarAsignatura()
                                 break;
 
-                            case 2:
+                            case 2: //listarAsignaturas()
                                 break;
 
-                            case 3:
+                            case 3: //buscarAsignatura()
                                 break;
 
-                            case 4:
+                            case 4: //actualizarAsignatura()
                                 break;
+
+                            case 5: //eliminarAsignatura()
 
                             case 0:
                                 break;
@@ -126,18 +130,20 @@ public class Main{
                         System.out.println("Escoge una opcion - ");
                         opcion = scan.nextInt();
 
-                        switch (opcion) {       //Sub switch 2
-                            case 1:
+                        switch (opcion) {       //Sub switch 3
+                            case 1: //registrarNota()
                                 break;
 
-                            case 2:
+                            case 2: //listarNotas()
                                 break;
 
-                            case 3:
+                            case 3: //buscarNota()
                                 break;
 
-                            case 4:
+                            case 4: //actualizarNota()
                                 break;
+
+                            case 5: //eliminarNota()
 
                             case 0:
                                 break;
@@ -157,5 +163,40 @@ public class Main{
         } while (opcion1 != 0);
     }
 
+    public void registrarEstudiante()
+    {
+        System.out.println("\n---AGREGAR ESTUDIANTES---");
+        System.out.println("Codigo :");
+        String codigo = scan.nextLine();
+        System.out.println("Nombre :");
+        String nombre = scan.nextLine();
+        System.out.println("Apellido :");
+        String apellido = scan.nextLine();
+        System.out.println("Edad :");
+        String edad = scan.nextLine();
+        System.out.println("Semestre");
+        String Semestre = scan.nextLine();
 
+        Estudiante estudiante = new Estudiante(codigo, nombre, apellido, edad, Semestre);
+        estudiantes.add(estudiante);
+        System.out.println("Registro Exitoso\n");
+    }
+
+//    public void listarEstudiantes() {}
+//    public void buscarEstudiante()
+//    public void actualizarEstudiante()
+//    public void eliminarEstudiante()
+//
+//    public void registrarAsignatura()
+//    public void listarAsignaturas()
+//    public void buscarAsignatura()
+//    public void actualizarAsignatura()
+//    public void eliminarAsignatura()
+//
+//    public void registrarNota()
+//    public void listarNotas()
+//    public void buscarNota()
+//    public void actualizarNota()
+//    public void eliminarNota()
 }
+
