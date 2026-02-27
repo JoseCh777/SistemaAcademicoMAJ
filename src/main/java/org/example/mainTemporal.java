@@ -90,6 +90,27 @@ public class mainTemporal {
         System.out.println("Asignatura no encontrada.");
     }
 
+    public static void eliminarAsignatura() {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Ingrese codigo de la asignatura a eliminar: ");
+        String codigoBuscado = sc.nextLine();
+
+        for (int i = 0; i < listaAsignaturas.size(); i++) {
+
+            if (listaAsignaturas.get(i).getCodigo().equalsIgnoreCase(codigoBuscado)) {
+
+                listaAsignaturas.remove(i);
+
+                System.out.println("Asignatura eliminada correctamente.");
+                return;
+            }
+        }
+
+        System.out.println("Asignatura no encontrada.");
+    }
+
 
 
 }
