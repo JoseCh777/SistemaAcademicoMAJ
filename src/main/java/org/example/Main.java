@@ -56,5 +56,23 @@ public class Main {
 
             System.out.println("Nota registrada correctamente");
         }
+        public static void listarNotas() {
+            for (Nota n : notas) {
+                System.out.println(n);
+            }
+        }
+        public static void buscarNota() {
+
+            System.out.println("Ingrese código del estudiante:");
+            String codigo = scanner.nextLine();
+
+            for (Nota n : notas) {
+                if (n.getEstudiante().getCodigo().equals(codigo)) {
+                    System.out.println(n);
+                }
+            }
+        }
+
+
     }
 }
