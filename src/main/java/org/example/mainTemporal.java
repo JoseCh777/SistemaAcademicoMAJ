@@ -15,10 +15,6 @@ public class mainTemporal {
 
         Scanner sc = new Scanner(System.in);
 
-        if (codigo.isEmpty()) {
-            System.out.println("Codigo no valido.");
-            return;
-        }
         System.out.print("Ingrese codigo: ");
         String codigo = sc.nextLine();
 
@@ -66,6 +62,33 @@ public class mainTemporal {
         System.out.println("Asignatura no encontrada.");
     }
 
+    public static void actualizarAsignatura() {
+
+        Scanner sc = new Scanner(System.in);
+
+        if (codigo.isEmpty()) {
+            System.out.println("Codigo no valido.");
+            return;
+        }
+        System.out.print("Ingrese codigo de la asignatura a actualizar: ");
+        String codigoBuscado = sc.nextLine();
+
+        for (Asignatura a : listaAsignaturas) {
+
+            if (a.getCodigo().equalsIgnoreCase(codigoBuscado)) {
+
+                System.out.print("Ingrese nuevo nombre: ");
+                String nuevoNombre = sc.nextLine();
+
+                a.setNombre(nuevoNombre);
+
+                System.out.println("Asignatura actualizada correctamente.");
+                return;
+            }
+        }
+
+        System.out.println("Asignatura no encontrada.");
+    }
 
 
 
