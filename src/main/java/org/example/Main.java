@@ -93,7 +93,29 @@ public class Main {
 
             System.out.println("Nota no encontrada");
         }
+
         
+        public static void eliminarNota() {
+
+            System.out.println("Ingrese código del estudiante:");
+            String codigo = scanner.nextLine();
+
+            Nota notaEliminar = null;
+
+            for (Nota n : notas) {
+                if (n.getEstudiante().getCodigo().equals(codigo)) {
+                    notaEliminar = n;
+                    break;
+                }
+            }
+
+            if (notaEliminar != null) {
+                notas.remove(notaEliminar);
+                System.out.println("Nota eliminada");
+            } else {
+                System.out.println("Nota no encontrada");
+            }
+        }
 
 
     }
