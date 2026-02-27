@@ -1,6 +1,5 @@
 package org.example;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.*;
 
@@ -66,7 +65,7 @@ public class Main{
                                 break;
 
                             case 5:
-                                //eliminarEstudiante();
+                                eliminarEstudiante();
                                 break;
 
                             case 0:
@@ -248,7 +247,25 @@ public class Main{
     }
 //-----------------------------------------------------------------------------------------------------------
 
-//    public void eliminarEstudiante()
+    public void eliminarEstudiante()
+    {
+        System.out.println("\n---ELIMINAR ESTUDIANTE---");
+        System.out.println("Ingrese el codigo");
+        String codigo = scan.nextLine();
+
+        for(Estudiante estudiante : estudiantes)
+        {
+            if(estudiante.getcodigo().equals(codigo))
+            {
+                estudiantes.remove(estudiante);
+                System.out.println("Estudiante Eliminado");
+                return;
+            }
+        }
+        System.out.println("Estudiante no Encontrado\n");
+    }
+}
+
 //
 //    public void registrarAsignatura()
 //    public void listarAsignaturas()
@@ -261,5 +278,5 @@ public class Main{
 //    public void buscarNota()
 //    public void actualizarNota()
 //    public void eliminarNota()
-}
+
 
