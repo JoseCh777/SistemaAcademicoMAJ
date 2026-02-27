@@ -2,10 +2,10 @@ package org.example;
 
 
 public class Asignatura {
-         String codigo;
-         String nombre;
-         int credito;
-         String docente;
+        private String codigo;
+        private String nombre;
+        private int credito;
+        private String docente;
 
     public Asignatura() {
     }
