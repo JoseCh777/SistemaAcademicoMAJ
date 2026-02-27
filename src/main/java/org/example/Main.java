@@ -72,6 +72,28 @@ public class Main {
                 }
             }
         }
+        public static void actualizarNota() {
+
+            System.out.println("Ingrese código del estudiante:");
+            String codigo = scanner.nextLine();
+
+            for (Nota n : notas) {
+                if (n.getEstudiante().getCodigo().equals(codigo)) {
+
+                    System.out.println("Ingrese nuevo valor:");
+                    double nuevoValor = scanner.nextDouble();
+                    scanner.nextLine();
+
+                    n.setValor(nuevoValor);
+
+                    System.out.println("Nota actualizada");
+                    return;
+                }
+            }
+
+            System.out.println("Nota no encontrada");
+        }
+        
 
 
     }
