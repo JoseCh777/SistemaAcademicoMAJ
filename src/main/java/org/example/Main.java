@@ -266,17 +266,5 @@ public class Main{
     }
 }
 
-//
-//    public void registrarAsignatura()
-//    public void listarAsignaturas()
-//    public void buscarAsignatura()
-//    public void actualizarAsignatura()
-//    public void eliminarAsignatura()
-//
-//    public void registrarNota()
-//    public void listarNotas()
-//    public void buscarNota()
-//    public void actualizarNota()
-//    public void eliminarNota()
 
 
