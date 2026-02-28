@@ -21,7 +21,7 @@ public class Main {
 
         Estudiante estudianteEncontrado = null;
         for (Estudiante e : estudiantes) {
-            if (e.getCodigo().equals(codigoEst)) {
+            if (e.getcodigo().equals(codigoEst)) {
                 estudianteEncontrado = e;
                 break;
             }
@@ -73,7 +73,7 @@ public class Main {
         String codigo = scanner.nextLine();
 
         for (Nota n : notas) {
-            if (n.getEstudiante().getCodigo().equals(codigo)) {
+            if (n.getEstudiante().getcodigo().equals(codigo)) {
                 System.out.println(n);
             }
         }
@@ -85,7 +85,7 @@ public class Main {
         String codigo = scanner.nextLine();
 
         for (Nota n : notas) {
-            if (n.getEstudiante().getCodigo().equals(codigo)) {
+            if (n.getEstudiante().getcodigo().equals(codigo)) {
 
                 System.out.println("Ingrese nuevo valor:");
                 double nuevoValor = scanner.nextDouble();
@@ -109,7 +109,7 @@ public class Main {
         Nota notaEliminar = null;
 
         for (Nota n : notas) {
-            if (n.getEstudiante().getCodigo().equals(codigo)) {
+            if (n.getEstudiante().getcodigo().equals(codigo)) {
                 notaEliminar = n;
                 break;
             }

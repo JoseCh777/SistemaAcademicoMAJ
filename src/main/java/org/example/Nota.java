@@ -51,7 +51,7 @@ public class Nota {
     @Override
     public String toString() {
         return "Nota{" +
-                "estudiante=" + estudiante.getNombre() +
+                "estudiante=" + estudiante.getnombre() +
                 ", asignatura=" + asignatura.getNombre() +
                 ", valor=" + valor +
                 ", periodo='" + periodo + '\'' +
