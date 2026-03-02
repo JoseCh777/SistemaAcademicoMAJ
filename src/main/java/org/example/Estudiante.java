@@ -4,67 +4,41 @@ public class Estudiante {
       private String codigo;
       private String nombre;
       private String apellido;
-      private int edad;
-      private int semestre;
+      private String edad;      // cambiado de int a String
+      private String semestre;  // cambiado de int a String
 
-      public Estudiante() {
+      public Estudiante() {}
 
-      }
-
-      public Estudiante(String codigo, String nombre, String apellido, int edad, int semestre) {
-            this.codigo = codigo;
-            this.nombre = nombre;
+      public Estudiante(String codigo, String nombre, String apellido, String edad, String semestre) {
+            this.codigo   = codigo;
+            this.nombre   = nombre;
             this.apellido = apellido;
-            this.edad = edad;
+            this.edad     = edad;
             this.semestre = semestre;
       }
 
-      public String getCodigo() {
-            return codigo;
-      }
+      public String getcodigo()              { return codigo; }
+      public void   setcodigo(String codigo) { this.codigo = codigo; }
 
-      public void setCodigo(String codigo) {
-            this.codigo = codigo;
-      }
+      public String getnombre()              { return nombre; }
+      public void   setnombre(String nombre) { this.nombre = nombre; }
 
-      public String getNombre() {
-            return nombre;
-      }
+      public String getapellido()                { return apellido; }
+      public void   setapellido(String apellido) { this.apellido = apellido; }
 
-      public void setNombre(String nombre) {
-            this.nombre = nombre;
-      }
+      public String getedad()            { return edad; }
+      public void   setedad(String edad) { this.edad = edad; }   // cambiado de int a String
 
-      public String getApellido() {
-            return apellido;
-      }
-
-      public void setApellido(String apellido) {
-            this.apellido = apellido;
-      }
-
-      public int getEdad() {
-            return edad;
-      }
-
-      public void setEdad(int edad) {
-            this.edad = edad;
-      }
-
-      public int getSemestre() {
-            return semestre;
-      }
-
-      public void setSemestre(int semestre) {
-            this.semestre = semestre;
-      }
+      public String getsemestre()                { return semestre; }
+      public void   setsemestre(String semestre) { this.semestre = semestre; }  // cambiado de int a String
 
       @Override
       public String toString() {
-            return "Codigo: " + codigo +
-                    "\nNombre: " + nombre +
-                    "\nApellido: " + apellido +
-                    "\nEdad: " + edad +
-                    "\nSemestre: " + semestre;
+            return  "Estudiante"+
+                    "\nCodigo: "    + codigo   +
+                    "\nNombre: "  + nombre   +
+                    "\nApellido: "+ apellido +
+                    "\nEdad: "    + edad     +
+                    "\nSemestre: "+ semestre;
       }
 }
